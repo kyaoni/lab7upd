@@ -36,7 +36,7 @@ public class SimpleFractions {
         System.out.println("Деление первым способом: " + n + "/" + d);
     }
 
-    void sum2(SimpleFractions fraction2) {
+    void sum(SimpleFractions fraction2) {
         int num = fraction2.numerator;
         int denum = fraction2.denominator;
         int x = 0;
@@ -46,7 +46,7 @@ public class SimpleFractions {
         System.out.println("Сложение вторым способом: " + x + "/" + y);
     }
 
-    void min2(SimpleFractions fraction2) {
+    void min(SimpleFractions fraction2) {
         int num = fraction2.numerator;
         int denum = fraction2.denominator;
         int x = 0;
@@ -56,7 +56,7 @@ public class SimpleFractions {
         System.out.println("Вычитание вторым способом: " + x + "/" + y);
     }
 
-    void multiply2(SimpleFractions fraction2) {
+    void multiply(SimpleFractions fraction2) {
         int num = fraction2.numerator;
         int denum = fraction2.denominator;
         int x = 0;
@@ -66,7 +66,7 @@ public class SimpleFractions {
         System.out.println("Умножение вторым способом: " + x + "/" + y);
     }
 
-    void divide2(SimpleFractions fraction2) {
+    void divide(SimpleFractions fraction2) {
         int num = fraction2.numerator;
         int denum = fraction2.denominator;
         int x = 0;
@@ -96,10 +96,10 @@ public class SimpleFractions {
             min(fraction1, fraction2);
             multiply(fraction1, fraction2);
             divide(fraction1, fraction2);
-            sum2(fraction2);
-            min2(fraction2);
-            multiply2(fraction2);
-            divide2(fraction2);
+            sum(fraction2);
+            min(fraction2);
+            multiply(fraction2);
+            divide(fraction2);
         } catch (InputMismatchException e) {
             System.out.println("Ошибка в вводе данных.");
         } catch (ArithmeticException e) {
