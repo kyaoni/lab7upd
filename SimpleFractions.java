@@ -24,13 +24,13 @@ public class SimpleFractions {
         System.out.println("Вычитание первым способом: " + n + "/" + d);
     }
 
-    static void multiply(SimpleFractions fraction1, SimpleFractions fraction2) {
+     static void multiply(SimpleFractions fraction1, SimpleFractions fraction2) {
         int n = fraction1.numerator * fraction2.numerator;
         int d = fraction1.denominator * fraction2.denominator;
         System.out.println("Умножение первым способом: " + n + "/" + d);
     }
 
-    static void divide(SimpleFractions fraction1, SimpleFractions fraction2) {
+     static void divide(SimpleFractions fraction1, SimpleFractions fraction2) {
         int n = fraction1.numerator * fraction2.denominator;
         int d = fraction1.denominator * fraction2.numerator;
         System.out.println("Деление первым способом: " + n + "/" + d);
@@ -39,20 +39,16 @@ public class SimpleFractions {
     void sum(SimpleFractions fraction2) {
         int num = fraction2.numerator;
         int denum = fraction2.denominator;
-        int x = 0;
-        int y = 0;
-        x = this.numerator * denum + this.denominator * num;
-        y = this.denominator * denum;
+        int x = this.numerator * denum + this.denominator * num;
+        int y = this.denominator * denum;
         System.out.println("Сложение вторым способом: " + x + "/" + y);
     }
 
     void min(SimpleFractions fraction2) {
         int num = fraction2.numerator;
         int denum = fraction2.denominator;
-        int x = 0;
-        int y= 0;
-        x = this.numerator * denum - this.denominator * num;
-        y = this.denominator * denum;
+        int x = this.numerator * denum - this.denominator * num;
+        int y = this.denominator * denum;
         System.out.println("Вычитание вторым способом: " + x + "/" + y);
     }
 
@@ -69,10 +65,8 @@ public class SimpleFractions {
     void divide(SimpleFractions fraction2) {
         int num = fraction2.numerator;
         int denum = fraction2.denominator;
-        int x = 0;
-        int y = 0;
-        x = this.numerator * denum;
-        y = this.denominator * num;
+        int x = this.numerator * denum;
+        int y = this.denominator * num;
         System.out.println("Деление вторым способом: " + x + "/" + y);
     }
     public static void main(String args[]) {
@@ -96,10 +90,10 @@ public class SimpleFractions {
             min(fraction1, fraction2);
             multiply(fraction1, fraction2);
             divide(fraction1, fraction2);
-            sum(fraction2);
-            min(fraction2);
-            multiply(fraction2);
-            divide(fraction2);
+            fraction1.sum(fraction2);
+            fraction1. min(fraction2);
+            fraction1.multiply(fraction2);
+            fraction1.divide(fraction2);
         } catch (InputMismatchException e) {
             System.out.println("Ошибка в вводе данных.");
         } catch (ArithmeticException e) {
